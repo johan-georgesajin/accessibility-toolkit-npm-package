@@ -1,0 +1,25 @@
+{
+  "name": "@a11y-toolkit/demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --pretty false"
+  },
+  "dependencies": {
+    "@a11y-toolkit/core": "workspace:*",
+    "@a11y-toolkit/reading": "workspace:*",
+    "@a11y-toolkit/visual": "workspace:*",
+    "@a11y-toolkit/modes": "workspace:*",
+    "@a11y-toolkit/devtools": "workspace:*",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0"
+  }
+}
