@@ -1,0 +1,120 @@
+@import './styles(1).css';
+
+:root[data-a11y-root],
+:root[data-a11y-root] body {
+  background: var(--a11y-color-bg) !important;
+  color: var(--a11y-color-fg) !important;
+}
+:root[data-a11y-root] body {
+  font-size: var(--a11y-font-size-base);
+  zoom: var(--a11y-zoom);
+}
+:root[data-a11y-root] main,
+:root[data-a11y-root] .workspace,
+:root[data-a11y-root] .reading-surface,
+:root[data-a11y-root] .speech-settings,
+:root[data-a11y-root] .ai-tools,
+:root[data-a11y-root] .tool-grid > div,
+:root[data-a11y-root] .tool-result {
+  background: var(--a11y-color-bg) !important;
+  color: var(--a11y-color-fg) !important;
+  border-color: color-mix(in srgb, var(--a11y-color-fg) 35%, transparent) !important;
+}
+:root[data-a11y-root] .eyebrow,
+:root[data-a11y-root] .workspace-header p,
+:root[data-a11y-root] .speech-settings output {
+  color: var(--a11y-color-fg) !important;
+}
+[data-a11y-root] :where(p, li, label, button, input, select) {
+  line-height: var(--a11y-line-height);
+  letter-spacing: var(--a11y-letter-spacing);
+  word-spacing: var(--a11y-word-spacing);
+}
+[data-a11y-large-controls='true'] :where(button, input, select, textarea) {
+  min-height: 48px;
+}
+[data-a11y-large-cursor='true'],
+[data-a11y-large-cursor='true'] * {
+  cursor: pointer !important;
+}
+.a11y-launcher {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 2147483646;
+  display: inline-grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
+  place-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--a11y-accent-color, #2563eb);
+  box-shadow: 0 4px 14px rgb(15 23 42 / 35%);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+.a11y-launcher:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgb(15 23 42 / 40%);
+}
+.a11y-launcher:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+.a11y-launcher__icon {
+  width: 1.7rem;
+  height: 1.7rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.a11y-launcher__icon circle {
+  fill: currentColor;
+  stroke: none;
+}
+.a11y-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.a11y-panel {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 4rem);
+  z-index: 2147483647;
+  display: grid;
+  gap: 0.75rem;
+  width: min(22rem, calc(100vw - 2rem));
+  max-height: min(38rem, calc(100dvh - 6rem));
+  padding: 1rem;
+  overflow: auto;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  color: #172033;
+  background: #fff;
+  box-shadow: 0 12px 30px #0004;
+}
+.a11y-panel header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.a11y-panel h2 {
+  margin: 0;
+}
+.a11y-panel label {
+  display: grid;
+  gap: 0.25rem;
+  font-weight: 600;
+}

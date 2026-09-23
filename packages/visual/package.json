@@ -1,0 +1,36 @@
+{
+  "name": "@a11y-toolkit/visual",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@a11y-toolkit/core": "workspace:*",
+    "@a11y-toolkit/devtools": "workspace:*",
+    "@a11y-toolkit/modes": "workspace:*"
+  },
+  "peerDependencies": {
+    "@a11y-toolkit/core": "workspace:*",
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "react": "^19.1.1"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  }
+}
